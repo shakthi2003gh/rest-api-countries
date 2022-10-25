@@ -1,0 +1,37 @@
+.card {
+  font-size: var(--fs-300);
+  width: clamp(280px, 100%, 300px);
+  border-radius: 5px;
+  background-color: var(--bg-secondary);
+  overflow: hidden;
+
+  .country-img {
+    height: 160px;
+
+    img {
+      width: 100%;
+    }
+  }
+
+  .details {
+    padding: 2rem 1.5rem;
+
+    .country-name {
+      font-size: var(--fs-400);
+      font-weight: 800;
+      margin-bottom: 1rem;
+    }
+
+    .population,
+    .region,
+    .capital {
+      text-transform: capitalize;
+      margin-bottom: 10px;
+
+      output {
+        font-weight: 300;
+        opacity: 0.75;
+      }
+    }
+  }
+}
