@@ -1,0 +1,9 @@
+@forward "variables";
+@forward "normalize";
+@import url("https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;600;800&display=swap");
+
+.app {
+  min-height: 100vh;
+  color: var(--clr-primary);
+  background: var(--bg-primary);
+}
