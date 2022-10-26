@@ -1,0 +1,46 @@
+.select {
+  position: relative;
+  font-size: var(--fs-300);
+  text-transform: capitalize;
+  width: 190px;
+  color: inherit;
+  cursor: pointer;
+
+  &:focus .options {
+    opacity: 1;
+  }
+
+  margin: 5rem;
+
+  .selected {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 20px;
+    border-radius: 5px;
+    background-color: var(--bg-secondary);
+
+    span {
+      font-size: 15px;
+    }
+  }
+
+  .options {
+    position: absolute;
+    top: calc(100% + 4px);
+    opacity: 0;
+    width: 100%;
+    padding-block: 10px;
+    border-radius: 5px;
+    background-color: var(--bg-secondary);
+
+    .option {
+      padding: 5px 20px;
+
+      &:hover,
+      &:focus {
+        background-color: var(--bg-primary);
+      }
+    }
+  }
+}
