@@ -1,0 +1,39 @@
+@forward "country-card";
+@forward "region-filter";
+@forward "search-bar";
+
+.home {
+  padding: 1.5rem 1rem;
+  max-width: 375px;
+  margin-inline: auto;
+
+  .header {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+
+  .countries-cards {
+    --width: 300px;
+
+    display: grid;
+    place-content: center;
+    grid-template-columns: repeat(auto-fit, var(--width));
+    gap: 4rem;
+    margin-block: 3rem;
+  }
+
+  @media (min-width: 600px) {
+    padding: 2.5rem 1rem;
+    max-width: none;
+
+    .header {
+      flex-direction: row;
+      justify-content: space-between;
+    }
+
+    .countries-cards {
+      --width: 275px;
+    }
+  }
+}

@@ -1,5 +1,6 @@
 import { useState } from "react";
 import Header from "./component/header";
+import Home from "./component/home";
 
 function App() {
   const [theme, setTheme] = useState("dark");
@@ -11,6 +12,8 @@ function App() {
   return (
     <div className={"app " + theme}>
       <Header onThemeChange={handleThemeChange} />
+
+      <Home />
     </div>
   );
 }

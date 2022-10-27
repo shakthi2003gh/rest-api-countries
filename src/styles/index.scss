@@ -1,9 +1,7 @@
 @forward "variables";
 @forward "normalize";
 @forward "header";
-@forward "country-card";
-@forward "region-filter";
-@forward "search-bar";
+@forward "home";
 @import url("https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;600;800&display=swap");
 
 html {
@@ -21,4 +19,11 @@ html {
 .container {
   max-width: 1300px;
   margin-inline: auto;
+}
+
+.not-found {
+  font-size: 2rem;
+  font-weight: 600;
+  text-align: center;
+  margin-top: 5rem;
 }
