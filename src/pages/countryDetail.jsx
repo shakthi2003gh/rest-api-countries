@@ -17,6 +17,9 @@ const CountryDetails = () => {
     call();
   }, [search]);
 
+  if (Object.keys(details).length === 0)
+    return <h1 className="not-found">Country Not Found</h1>;
+
   return (
     <div className="country-details container">
       <button className="bg-primary" onClick={() => navigate(-1)}>
