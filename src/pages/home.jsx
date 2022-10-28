@@ -1,7 +1,8 @@
 import { useState, useEffect } from "react";
-import Searchbar from "./searchBar";
-import Filter from "./regionFilter";
-import Card from "./countryCard";
+import { Link } from "react-router-dom";
+import Searchbar from "../component/searchBar";
+import Filter from "../component/regionFilter";
+import Card from "../component/countryCard";
 import { getCountries } from "../services/rest-api";
 
 const Home = () => {
@@ -44,7 +45,9 @@ const Home = () => {
       {countries.length !== 0 ? (
         <div className="countries-cards">
           {countries.map((country, index) => (
-            <Card key={index} country={country} />
+            <Link key={index} to={`/country/${country.name.toLowerCase()}`}>
+              <Card country={country} />
+            </Link>
           ))}
         </div>
       ) : (

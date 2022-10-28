@@ -2,6 +2,7 @@
 @forward "normalize";
 @forward "header";
 @forward "home";
+@forward "country-details";
 @import url("https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;600;800&display=swap");
 
 html {
@@ -12,8 +13,7 @@ html {
   min-height: 100vh;
   color: var(--clr-primary);
   background: var(--bg-primary);
-
-  transition: all 0.5s ease;
+  transition: color 0.5s ease, background 0.5s ease;
 }
 
 .container {
@@ -26,4 +26,9 @@ html {
   font-weight: 600;
   text-align: center;
   margin-top: 5rem;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
 }
